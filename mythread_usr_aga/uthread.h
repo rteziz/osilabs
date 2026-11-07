@@ -18,8 +18,6 @@ typedef struct uthread {
 
 typedef uthread *uthread_t;
 
-/* Before the first create: uthread thread = {0}; */
-/* create/join/detach/cancel are called only from main. */
 int uthread_create(uthread_t thread, void *(*start_routine)(void *), void *arg);
 int uthread_join(uthread_t thread);
 int uthread_detach(uthread_t thread);

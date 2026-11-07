@@ -34,7 +34,6 @@ static void release_stack(uthread_t thread){
 static void run_thread(void){
     current->start_routine(current->arg);
     current->done = 1;
-    /* Returning transfers control to main_context via uc_link. */
 }
 
 int uthread_create(uthread_t thread, void *(*start_routine)(void *), void *arg){
@@ -136,7 +135,6 @@ void uthread_testcancel(uthread_t self){
         return;
     self->canceled = 1;
     self->done = 1;
-    /* The scheduler will never put this context back into the queue. */
     if (setcontext(&main_context) == -1)
         abort();
 }
