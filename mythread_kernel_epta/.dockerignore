@@ -1,0 +1,8 @@
+*
+!Dockerfile
+!CMakeLists.txt
+!main.c
+!mythread.c
+!mythread.h
+!mythread_syscall.h
+!test_mythread.c

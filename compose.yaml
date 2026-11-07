@@ -1,0 +1,5 @@
+services:
+  mythread:
+    build: ./mythread_kernel_epta
+  uthread:
+    build: ./mythread_usr_aga
